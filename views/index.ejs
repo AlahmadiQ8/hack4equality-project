@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+  </head>
+  <body>
+
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action='/create-session' method='post'>
+      Enter a nick name:
+      <input type="text" name="nickname" value="" required>
+      <button type="submit">Create new session</button> 
+    </form>
+
+    <hr>
+
+    <h2>Available Sessions</h2>
+
+    <% userSessions.forEach(function (doc){ %>
+    <div>
+      <p><%= doc.nickname %></p>
+      <p><%= doc.sessionId %></p>
+    </div>
+    <% }); %>
+
+    <% if (locals.serverData) { %>
+    <script>var serverData = <%- serverData %>;</script>
+    <% }; %>
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+  </body>
+</html>

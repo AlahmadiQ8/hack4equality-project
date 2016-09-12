@@ -1,0 +1,26 @@
+{
+  "name": "hack4equality",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=server,index nodemon --debug server.js"
+  },
+  "author": "Mohammad Mohammad",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.2.0",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "http": "0.0.0",
+    "mongoose": "^4.6.0",
+    "morgan": "^1.7.0",
+    "opentok": "^2.4.0",
+    "path": "^0.12.7"
+  }
+}
